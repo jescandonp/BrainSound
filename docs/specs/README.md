@@ -30,3 +30,13 @@ La aprobación debe ser explícita y quedar registrada en el documento afectado.
 - Secuencia técnica dentro de alcance aprobado: actualizar y aprobar su plan.
 - Código, activos, dependencias o configuración ejecutable: solo después de ambas aprobaciones.
 - Publicación o despliegue: autorización separada, incluso con I5 completada.
+
+## Corte al terminar la planificación
+
+Cuando los cinco planes estén terminados, autorrevisados y registrados, se debe ejecutar la skill `handoff` antes de iniciar cualquier implementación. El corte debe:
+
+- obtener su ruta temporal mediante `mktemp -t handoff-XXXXXX.md`;
+- referenciar esta matriz, las seis SPECs, los cinco planes y los commits relevantes;
+- resumir decisiones, estado y siguiente compuerta sin duplicar el contenido de esos artefactos;
+- recomendar las skills necesarias para la siguiente sesión;
+- dejar explícito que el inicio de implementación sigue requiriendo aprobación de los planes.

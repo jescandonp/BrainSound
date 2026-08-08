@@ -2,7 +2,7 @@
 
 - **Versión:** 0.1.0
 - **Fecha:** 2026-08-07
-- **Estado:** diseño conversacional aprobado; documento pendiente de revisión del usuario
+- **Estado:** especificación aprobada por el usuario el 2026-08-07; planificación en curso
 - **Método:** Spec-Driven Development (SPEC → PLAN → TASKS → IMPLEMENT)
 
 ## 1. Objetivo
@@ -387,4 +387,4 @@ No existen preguntas de producto que bloqueen el plan. La selección exacta de l
 
 ## 19. Compuerta SDD
 
-Este documento debe ser revisado y aprobado explícitamente por el usuario antes de crear el plan de implementación. La aprobación del diseño conversacional no sustituye la revisión de esta especificación escrita.
+La revisión y aprobación explícita de esta especificación quedó registrada el 2026-08-07. El MVP se descompondrá en iteraciones; cada plan deberá aprobarse antes de ejecutar sus tareas y cualquier cambio de alcance actualizará primero esta SPEC.

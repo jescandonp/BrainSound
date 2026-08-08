@@ -239,20 +239,20 @@ npm run verify
 ## 11. Estructura del proyecto
 
 ```text
-docs/superpowers/specs/  Especificaciones SDD aprobadas
-docs/plans/              Planes de implementación aprobados
-public/catalog/          Activos y manifiestos del catálogo
-src/app/                 Shell, rutas y composición
-src/features/            Onboarding, player, explore, progress y settings
-src/audio/               Motor Web Audio y planificación de sesión
-src/catalog/             Contratos, búsqueda, licencias y validación
-src/storage/             IndexedDB, migraciones y respaldo
-src/pwa/                 Service Worker, caché e instalación
-src/shared/              Tipos, utilidades y componentes reutilizables
-src/styles/              Tokens y estilos globales
-tests/                   Pruebas de integración compartidas
-e2e/                     Pruebas Playwright
-scripts/                 Validación de catálogo y tareas de proyecto
+docs/specs/       Especificaciones SDD aprobadas
+docs/plans/       Planes de implementación aprobados
+public/catalog/   Activos y manifiestos del catálogo
+src/app/          Shell, rutas y composición
+src/features/     Onboarding, player, explore, progress y settings
+src/audio/        Motor Web Audio y planificación de sesión
+src/catalog/      Contratos, búsqueda, licencias y validación
+src/storage/      IndexedDB, migraciones y respaldo
+src/pwa/          Service Worker, caché e instalación
+src/shared/       Tipos, utilidades y componentes reutilizables
+src/styles/       Tokens y estilos globales
+tests/            Pruebas de integración compartidas
+e2e/              Pruebas Playwright
+scripts/          Validación de catálogo y tareas de proyecto
 ```
 
 Cada módulo tendrá una responsabilidad clara y expondrá contratos tipados. La interfaz no accederá directamente a IndexedDB, Cache Storage o nodos Web Audio.

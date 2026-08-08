@@ -12,7 +12,7 @@
 
 **SPEC:** `docs/specs/2026-08-07-brainsound-i5-offline-release-spec.md` — aprobada el 2026-08-07.
 
-**Estado:** propuesta para aprobación; no ejecutable sin aprobación explícita.
+**Estado:** aprobado por el usuario el 2026-08-07; ejecución condicionada al cierre satisfactorio de I4.
 
 **Dependencia de ejecución:** I1–I4 completadas. Rama/worktree `feat/i5-offline-release`.
 
@@ -415,4 +415,4 @@ Do not run any deploy, publish, domain or hosting command.
 
 ## Gate de aprobación antes de ejecutar
 
-Este plan requiere aprobación explícita e I1–I4 completadas. La preparación del build no autoriza despliegue; cualquier publicación exige una solicitud posterior separada.
+Gate de plan superado el 2026-08-07. I5 permanece bloqueada hasta cerrar I1–I4. La preparación del build no autoriza despliegue; cualquier publicación exige una solicitud posterior separada.

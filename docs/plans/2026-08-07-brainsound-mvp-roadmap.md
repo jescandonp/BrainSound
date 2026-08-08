@@ -2,7 +2,7 @@
 
 - **SPEC de origen:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Fecha:** 2026-08-07
-- **Estado:** cinco planes detallados propuestos para aprobación; implementación no autorizada
+- **Estado:** cinco planes detallados aprobados el 2026-08-07; I1 autorizada para ejecución secuencial
 - **Tipo:** roadmap de trazabilidad; no es un plan ejecutable
 - **Regla SDD:** cada iteración requiere primero una SPEC aprobada y después un plan detallado aprobado antes de modificar código.
 

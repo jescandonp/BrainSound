@@ -12,7 +12,7 @@
 
 **SPEC:** `docs/specs/2026-08-07-brainsound-i2-catalog-spec.md` — aprobada el 2026-08-07.
 
-**Estado:** propuesta para aprobación; no ejecutable sin aprobación explícita del usuario.
+**Estado:** aprobado por el usuario el 2026-08-07; ejecución condicionada al cierre satisfactorio de I1.
 
 **Dependencia de ejecución:** I1 completada y verificada. Trabajar en una rama/worktree `feat/i2-catalog` creada desde el cierre de I1.
 
@@ -1011,4 +1011,4 @@ git commit -m "docs: close BrainSound catalog iteration"
 
 ## Gate de aprobación antes de ejecutar
 
-Este plan implementa únicamente la SPEC I2 aprobada. Requiere aprobación explícita antes de crear el worktree o modificar código/activos. La selección de activos sigue sometida a evidencia primaria y revisión humana incluso después de aprobar el plan.
+Gate de plan superado el 2026-08-07. I2 permanece bloqueada hasta cerrar I1. La selección de activos sigue sometida a evidencia primaria y revisión humana durante la ejecución.

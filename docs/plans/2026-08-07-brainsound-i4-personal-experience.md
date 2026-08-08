@@ -12,7 +12,7 @@
 
 **SPEC:** `docs/specs/2026-08-07-brainsound-i4-personal-experience-spec.md` — aprobada el 2026-08-07.
 
-**Estado:** propuesta para aprobación; no ejecutable sin aprobación explícita.
+**Estado:** aprobado por el usuario el 2026-08-07; ejecución condicionada al cierre satisfactorio de I3.
 
 **Dependencia de ejecución:** I3 completada. Rama/worktree `feat/i4-personal-experience`.
 
@@ -459,4 +459,4 @@ git commit -m "docs: close BrainSound personal experience iteration"
 
 ## Gate de aprobación antes de ejecutar
 
-Este plan no autoriza sincronización, cuentas, notificaciones ni cambios en fórmula, rachas o esquema. Requiere aprobación explícita e I3 completada.
+Gate de plan superado el 2026-08-07. I4 permanece bloqueada hasta cerrar I3 y no autoriza sincronización, cuentas, notificaciones ni cambios en fórmula, rachas o esquema.

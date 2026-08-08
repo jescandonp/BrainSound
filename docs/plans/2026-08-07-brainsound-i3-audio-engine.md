@@ -12,7 +12,7 @@
 
 **SPEC:** `docs/specs/2026-08-07-brainsound-i3-audio-engine-spec.md` — aprobada el 2026-08-07.
 
-**Estado:** propuesta para aprobación; no ejecutable sin aprobación explícita.
+**Estado:** aprobado por el usuario el 2026-08-07; ejecución condicionada al cierre satisfactorio de I2.
 
 **Dependencia de ejecución:** I2 completada. Rama/worktree `feat/i3-audio-engine` desde el cierre I2.
 
@@ -482,4 +482,4 @@ git commit -m "docs: close BrainSound hybrid audio iteration"
 
 ## Gate de aprobación antes de ejecutar
 
-Este plan no autoriza audio no aprobado, telemetría ni afirmaciones clínicas. Requiere aprobación explícita y I2 completada antes de crear el worktree.
+Gate de plan superado el 2026-08-07. I3 permanece bloqueada hasta cerrar I2 y no autoriza audio no aprobado, telemetría ni afirmaciones clínicas.

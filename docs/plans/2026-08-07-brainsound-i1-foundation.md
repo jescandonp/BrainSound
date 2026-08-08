@@ -8,7 +8,7 @@
 
 **Tech Stack:** Node.js 24.18.1 LTS, TypeScript 7.0.2, React 19.2.8, Vite 8.1.5, Vitest 4.1.10, Playwright 1.61.1, ESLint 10.8.0 y Web Audio/Service Worker nativos.
 
-**Estado:** propuesta revisada contra la SPEC I1 aprobada; requiere aprobación explícita antes de ejecutar.
+**Estado:** aprobado por el usuario el 2026-08-07; Iteración 1 autorizada para ejecución.
 
 ---
 
@@ -2156,10 +2156,6 @@ git commit -m "docs: close BrainSound foundation iteration"
 
 ## Gate de aprobación antes de ejecutar
 
-Este documento fue revisado contra la SPEC I1 aprobada. No iniciar código hasta que el usuario apruebe explícitamente:
-
-1. este plan detallado de I1;
-2. la descomposición del MVP en cinco iteraciones del roadmap;
-3. que el catálogo de 15 experiencias, intensidades y audio híbrido se incorporen en I2 e I3 sin ampliar I1.
+Gate superado el 2026-08-07: el usuario aprobó conjuntamente los cinco planes y eligió ejecución con subagentes. Esta autorización permite iniciar I1, pero no adelantar tareas de I2–I5 ni desplegar el producto.
 
 Cualquier cambio funcional o arquitectónico posterior actualiza primero la SPEC o este plan, registra la decisión y vuelve a pasar por aprobación SDD.

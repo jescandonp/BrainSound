@@ -14,6 +14,8 @@
 
 **Ajuste técnico de lint aprobado:** el 2026-08-08 se excluyó `eslint.config.js` del lint tipado. El archivo configura ESLint pero no pertenece a un proyecto TypeScript; la exclusión evita aplicar reglas que requieren información de tipos sobre el propio archivo de configuración.
 
+**Ajuste técnico de tipos aprobado:** el 2026-08-08 se añadió `DOM` a las librerías del proyecto TypeScript de herramientas porque las declaraciones de Playwright referenciadas por `playwright.config.ts` exponen tipos del navegador. No cambia el runtime de Node ni el alcance funcional.
+
 ---
 
 ## Contexto y compuertas
@@ -200,7 +202,7 @@ Create `tsconfig.node.json`:
   "compilerOptions": {
     "composite": true,
     "target": "ES2023",
-    "lib": ["ES2023"],
+    "lib": ["ES2023", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": false,

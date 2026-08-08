@@ -2,7 +2,7 @@
 
 - **SPEC maestra:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Iteración:** I2 de 5
-- **Estado:** propuesta; requiere aprobación explícita antes de crear su plan
+- **Estado:** aprobada explícitamente por el usuario el 2026-08-07; planificación autorizada
 - **Dependencia:** I1 completada y sus contratos de modo disponibles
 
 ## 1. Objetivo
@@ -238,4 +238,4 @@ No hay decisiones de producto pendientes para planificar I2. La identidad de cad
 
 ## 14. Compuerta SDD
 
-El plan I2 solo puede escribirse después de aprobación explícita de esta SPEC. La incorporación real de cada activo exige además evidencia de licencia dentro del repositorio.
+La aprobación explícita quedó registrada el 2026-08-07 y autoriza escribir el plan I2. Ejecutarlo requiere aprobación separada del plan; incorporar cada activo exige además evidencia de licencia dentro del repositorio.

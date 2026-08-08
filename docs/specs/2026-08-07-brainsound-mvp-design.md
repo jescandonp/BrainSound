@@ -2,7 +2,7 @@
 
 - **Versión:** 0.1.0
 - **Fecha:** 2026-08-07
-- **Estado:** especificación aprobada por el usuario el 2026-08-07; SPECs de iteración en revisión
+- **Estado:** especificación y cinco SPECs de iteración aprobadas por el usuario el 2026-08-07; planificación en curso
 - **Método:** Spec-Driven Development (SPEC → PLAN → TASKS → IMPLEMENT)
 
 ## 1. Objetivo

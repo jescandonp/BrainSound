@@ -13,11 +13,11 @@ Este directorio es la fuente normativa del desarrollo. Un roadmap organiza; una 
 
 | Iteración | SPEC | Estado SPEC | Plan | Estado plan |
 |---|---|---|---|---|
-| I1 | `2026-08-07-brainsound-i1-foundation-spec.md` | Propuesta | `../plans/2026-08-07-brainsound-i1-foundation.md` | Suspendido hasta aprobación y revisión |
-| I2 | `2026-08-07-brainsound-i2-catalog-spec.md` | Propuesta | `../plans/2026-08-07-brainsound-i2-catalog.md` | No creado |
-| I3 | `2026-08-07-brainsound-i3-audio-engine-spec.md` | Propuesta | `../plans/2026-08-07-brainsound-i3-audio-engine.md` | No creado |
-| I4 | `2026-08-07-brainsound-i4-personal-experience-spec.md` | Propuesta | `../plans/2026-08-07-brainsound-i4-personal-experience.md` | No creado |
-| I5 | `2026-08-07-brainsound-i5-offline-release-spec.md` | Propuesta | `../plans/2026-08-07-brainsound-i5-offline-release.md` | No creado |
+| I1 | `2026-08-07-brainsound-i1-foundation-spec.md` | Aprobada 2026-08-07 | `../plans/2026-08-07-brainsound-i1-foundation.md` | En revisión contra SPEC |
+| I2 | `2026-08-07-brainsound-i2-catalog-spec.md` | Aprobada 2026-08-07 | `../plans/2026-08-07-brainsound-i2-catalog.md` | En creación |
+| I3 | `2026-08-07-brainsound-i3-audio-engine-spec.md` | Aprobada 2026-08-07 | `../plans/2026-08-07-brainsound-i3-audio-engine.md` | En creación |
+| I4 | `2026-08-07-brainsound-i4-personal-experience-spec.md` | Aprobada 2026-08-07 | `../plans/2026-08-07-brainsound-i4-personal-experience.md` | En creación |
+| I5 | `2026-08-07-brainsound-i5-offline-release-spec.md` | Aprobada 2026-08-07 | `../plans/2026-08-07-brainsound-i5-offline-release.md` | En creación |
 
 ## Regla de aprobación
 

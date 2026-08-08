@@ -2,7 +2,7 @@
 
 - **SPEC maestra:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Iteración:** I3 de 5
-- **Estado:** propuesta; requiere aprobación explícita antes de crear su plan
+- **Estado:** aprobada explícitamente por el usuario el 2026-08-07; planificación autorizada
 - **Dependencias:** I1 completada e I2 completada con catálogo validado
 
 ## 1. Objetivo
@@ -217,4 +217,4 @@ No hay preguntas de producto abiertas. La evaluación perceptual final se realiz
 
 ## 15. Compuerta SDD
 
-El plan I3 solo puede escribirse después de aprobación explícita de esta SPEC y no puede ejecutarse hasta que I2 esté completada con evidencia.
+La aprobación explícita quedó registrada el 2026-08-07 y autoriza escribir el plan I3. Ejecutarlo requiere aprobación separada del plan e I2 completada con evidencia.

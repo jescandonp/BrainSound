@@ -2,7 +2,7 @@
 
 - **SPEC maestra:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Iteración:** I5 de 5
-- **Estado:** propuesta; requiere aprobación explícita antes de crear su plan
+- **Estado:** aprobada explícitamente por el usuario el 2026-08-07; planificación autorizada
 - **Dependencias:** I1–I4 completadas con sus compuertas verdes
 
 ## 1. Objetivo
@@ -239,4 +239,4 @@ El proveedor de alojamiento gratuito no se selecciona en esta SPEC porque desple
 
 ## 15. Compuerta SDD
 
-El plan I5 solo puede escribirse después de aprobación explícita de esta SPEC. Ejecutarlo requiere I1–I4 completadas; publicar requiere una autorización adicional posterior a la verificación.
+La aprobación explícita quedó registrada el 2026-08-07 y autoriza escribir el plan I5. Ejecutarlo requiere aprobación separada del plan e I1–I4 completadas; publicar requiere una autorización adicional posterior a la verificación.

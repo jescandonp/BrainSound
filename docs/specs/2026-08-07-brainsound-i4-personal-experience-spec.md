@@ -2,7 +2,7 @@
 
 - **SPEC maestra:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Iteración:** I4 de 5
-- **Estado:** propuesta; requiere aprobación explícita antes de crear su plan
+- **Estado:** aprobada explícitamente por el usuario el 2026-08-07; planificación autorizada
 - **Dependencias:** I1, I2 e I3 completadas
 
 ## 1. Objetivo
@@ -235,4 +235,4 @@ No hay preguntas funcionales abiertas para planificar I4. Los valores iniciales 
 
 ## 16. Compuerta SDD
 
-El plan I4 solo puede escribirse después de aprobación explícita de esta SPEC y no puede ejecutarse hasta completar I3.
+La aprobación explícita quedó registrada el 2026-08-07 y autoriza escribir el plan I4. Ejecutarlo requiere aprobación separada del plan e I3 completada.

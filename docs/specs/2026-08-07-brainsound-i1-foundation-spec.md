@@ -2,7 +2,7 @@
 
 - **SPEC maestra:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Iteración:** I1 de 5
-- **Estado:** propuesta; requiere aprobación explícita antes de validar o ejecutar su plan
+- **Estado:** aprobada explícitamente por el usuario el 2026-08-07; planificación autorizada
 - **Precedencia:** la SPEC maestra gobierna el producto; esta SPEC únicamente concreta I1
 
 ## 1. Objetivo
@@ -216,4 +216,4 @@ No hay preguntas funcionales abiertas para planificar I1. Los valores concretos 
 
 ## 14. Compuerta SDD
 
-No se puede validar, ejecutar ni considerar vigente el plan de I1 hasta que el usuario apruebe explícitamente esta SPEC. Una modificación de alcance actualiza primero la SPEC maestra y luego esta SPEC.
+La aprobación explícita quedó registrada el 2026-08-07. El plan I1 puede revisarse contra esta SPEC, pero no puede ejecutarse hasta recibir su propia aprobación. Una modificación de alcance actualiza primero la SPEC maestra y luego esta SPEC.

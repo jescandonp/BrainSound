@@ -28,7 +28,7 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
-**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md` — propuesta, pendiente de aprobación.
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md` — aprobada el 2026-08-07.
 
 **Objetivo:** producir una PWA instalable con identidad Energía cromática, tres modos, audio sintético de respaldo, reproductor compacto, temporizador libre y recarga offline.
 
@@ -42,7 +42,7 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
-**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i2-catalog-spec.md` — propuesta, pendiente de aprobación.
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i2-catalog-spec.md` — aprobada el 2026-08-07.
 
 **Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i2-catalog.md`; no se escribe hasta aprobar la SPEC I2.
 
@@ -58,7 +58,7 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
-**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i3-audio-engine-spec.md` — propuesta, pendiente de aprobación.
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i3-audio-engine-spec.md` — aprobada el 2026-08-07.
 
 **Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i3-audio-engine.md`; no se escribe hasta aprobar la SPEC I3.
 
@@ -74,7 +74,7 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
-**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i4-personal-experience-spec.md` — propuesta, pendiente de aprobación.
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i4-personal-experience-spec.md` — aprobada el 2026-08-07.
 
 **Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i4-personal-experience.md`; no se escribe hasta aprobar la SPEC I4.
 
@@ -90,7 +90,7 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
-**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i5-offline-release-spec.md` — propuesta, pendiente de aprobación.
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i5-offline-release-spec.md` — aprobada el 2026-08-07.
 
 **Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i5-offline-release.md`; no se escribe hasta aprobar la SPEC I5.
 

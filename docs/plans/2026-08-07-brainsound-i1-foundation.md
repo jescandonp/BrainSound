@@ -12,6 +12,8 @@
 
 **Ajuste técnico aprobado:** el 2026-08-08 se sustituyó TypeScript 7.0.2 por 6.0.3 porque `typescript-eslint` 8.65.0 declara compatibilidad `>=4.8.4 <6.1.0`. No cambia alcance, arquitectura ni criterios de aceptación.
 
+**Ajuste técnico de lint aprobado:** el 2026-08-08 se excluyó `eslint.config.js` del lint tipado. El archivo configura ESLint pero no pertenece a un proyecto TypeScript; la exclusión evita aplicar reglas que requieren información de tipos sobre el propio archivo de configuración.
+
 ---
 
 ## Contexto y compuertas
@@ -345,7 +347,7 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['coverage/**', 'dist/**', 'playwright-report/**', 'public/**', 'test-results/**'] },
+  { ignores: ['coverage/**', 'dist/**', 'eslint.config.js', 'playwright-report/**', 'public/**', 'test-results/**'] },
   eslint.configs.recommended,
   ...tseslint.configs.strictTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,

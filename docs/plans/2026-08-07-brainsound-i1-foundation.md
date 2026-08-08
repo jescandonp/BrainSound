@@ -16,6 +16,8 @@
 
 **Ajuste técnico de tipos aprobado:** el 2026-08-08 se añadió `DOM` a las librerías del proyecto TypeScript de herramientas porque las declaraciones de Playwright referenciadas por `playwright.config.ts` exponen tipos del navegador. No cambia el runtime de Node ni el alcance funcional.
 
+**Corrección de trazabilidad de seguridad:** el 2026-08-08 la prueba de ganancia se alineó con la SPEC I1, que exige el rango `(0, 0.12]` para los tres perfiles y no únicamente para Deep Focus.
+
 ---
 
 ## Contexto y compuertas
@@ -491,10 +493,12 @@ describe('fallback catalog', () => {
     expect(new Set(fallbackCatalog.map(({ mode }) => mode)).size).toBe(3);
   });
 
-  it('returns a safe profile with bounded gain', () => {
-    const experience = getFallbackExperience('deep-focus');
-    expect(experience.profile.masterGain).toBeGreaterThan(0);
-    expect(experience.profile.masterGain).toBeLessThanOrEqual(0.12);
+  it('keeps every profile within the safe gain range', () => {
+    for (const { mode } of fallbackCatalog) {
+      const experience = getFallbackExperience(mode);
+      expect(experience.profile.masterGain).toBeGreaterThan(0);
+      expect(experience.profile.masterGain).toBeLessThanOrEqual(0.12);
+    }
   });
 });
 ```

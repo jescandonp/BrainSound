@@ -2,7 +2,7 @@
 
 - **SPEC de origen:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Fecha:** 2026-08-07
-- **Estado:** propuesta para aprobación
+- **Estado:** cinco planes detallados propuestos para aprobación; implementación no autorizada
 - **Tipo:** roadmap de trazabilidad; no es un plan ejecutable
 - **Regla SDD:** cada iteración requiere primero una SPEC aprobada y después un plan detallado aprobado antes de modificar código.
 
@@ -34,7 +34,7 @@ I5 Offline transaccional y entrega MVP
 
 **Entrega verificable:** una persona abre BrainSound, selecciona cualquiera de los tres modos, escucha un paisaje sintético local, pausa o reanuda, observa el tiempo transcurrido y recarga la aplicación sin red.
 
-**Plan detallado:** `docs/plans/2026-08-07-brainsound-i1-foundation.md` — suspendido hasta aprobación de la SPEC I1 y revisión de trazabilidad.
+**Plan detallado:** `docs/plans/2026-08-07-brainsound-i1-foundation.md` — propuesto para aprobación.
 
 **Compuerta de salida:** lint, tipos, unitarias, cobertura, compilación, catálogo de respaldo y E2E Chromium/WebKit en verde.
 
@@ -44,7 +44,7 @@ I5 Offline transaccional y entrega MVP
 
 **SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i2-catalog-spec.md` — aprobada el 2026-08-07.
 
-**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i2-catalog.md`; no se escribe hasta aprobar la SPEC I2.
+**Plan detallado:** `docs/plans/2026-08-07-brainsound-i2-catalog.md` — propuesto para aprobación.
 
 **Objetivo:** establecer el contrato definitivo del catálogo y la entrada segura de activos redistribuibles.
 
@@ -60,7 +60,7 @@ I5 Offline transaccional y entrega MVP
 
 **SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i3-audio-engine-spec.md` — aprobada el 2026-08-07.
 
-**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i3-audio-engine.md`; no se escribe hasta aprobar la SPEC I3.
+**Plan detallado:** `docs/plans/2026-08-07-brainsound-i3-audio-engine.md` — propuesto para aprobación.
 
 **Objetivo:** reemplazar el uso normal del sintetizador de respaldo por mezcla híbrida de música, ambiente y naturaleza.
 
@@ -76,7 +76,7 @@ I5 Offline transaccional y entrega MVP
 
 **SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i4-personal-experience-spec.md` — aprobada el 2026-08-07.
 
-**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i4-personal-experience.md`; no se escribe hasta aprobar la SPEC I4.
+**Plan detallado:** `docs/plans/2026-08-07-brainsound-i4-personal-experience.md` — propuesto para aprobación.
 
 **Objetivo:** completar la experiencia funcional de uso personal.
 
@@ -92,7 +92,7 @@ I5 Offline transaccional y entrega MVP
 
 **SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i5-offline-release-spec.md` — aprobada el 2026-08-07.
 
-**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i5-offline-release.md`; no se escribe hasta aprobar la SPEC I5.
+**Plan detallado:** `docs/plans/2026-08-07-brainsound-i5-offline-release.md` — propuesto para aprobación.
 
 **Objetivo:** cerrar la instalación completa del catálogo y la calidad multiplataforma.
 

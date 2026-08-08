@@ -8,14 +8,14 @@
 
 **Tech Stack:** Node.js 24.18.1 LTS, TypeScript 7.0.2, React 19.2.8, Vite 8.1.5, Vitest 4.1.10, Playwright 1.61.1, ESLint 10.8.0 y Web Audio/Service Worker nativos.
 
-**Estado:** suspendido; no ejecutable hasta aprobar `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md` y volver a revisar este plan.
+**Estado:** propuesta revisada contra la SPEC I1 aprobada; requiere aprobación explícita antes de ejecutar.
 
 ---
 
 ## Contexto y compuertas
 
 - SPEC maestra aprobada: `docs/specs/2026-08-07-brainsound-mvp-design.md`.
-- SPEC de I1 propuesta: `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md`; su aprobación es previa a la revisión de este plan.
+- SPEC de I1 aprobada: `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md`.
 - Hoja de ruta: `docs/plans/2026-08-07-brainsound-mvp-roadmap.md`.
 - Ejecutar en un worktree nuevo con rama `feat/i1-foundation`; no implementar directamente sobre `master`.
 - No agregar cuentas, backend, IndexedDB, audios externos, analítica, router o librería de estado en I1.
@@ -384,10 +384,10 @@ export default defineConfig({
       ],
       reporter: ['text', 'html'],
       thresholds: {
-        lines: 80,
-        functions: 80,
-        branches: 80,
-        statements: 80,
+        lines: 90,
+        functions: 90,
+        branches: 90,
+        statements: 90,
       },
     },
   },
@@ -1888,7 +1888,140 @@ git add e2e/quality.spec.ts src/features/home/HomeScreen.tsx src/styles/global.c
 git commit -m "test: enforce accessible private foundation experience"
 ```
 
-### Task 13: Documentar, medir y verificar la Iteración 1
+### Task 13: Mostrar recuperación cuando Web Audio no puede iniciar
+
+**Files:**
+- Create: `e2e/audio-error.spec.ts`
+- Modify: `src/app/App.tsx`
+- Modify: `src/features/home/HomeScreen.tsx`
+- Modify: `src/styles/global.css`
+
+- [ ] **Step 1: Escribir el E2E fallido del bloqueo de audio**
+
+Create `e2e/audio-error.spec.ts`:
+
+```ts
+import { expect, test } from '@playwright/test';
+
+test('conserva estado inactivo y permite reintentar cuando Web Audio falla', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'AudioContext', {
+      configurable: true,
+      value: class BlockedAudioContext {
+        constructor() { throw new Error('Audio bloqueado por prueba'); }
+      },
+    });
+  });
+  await page.goto('/');
+  await page.getByRole('button', { name: /Deep Focus/ }).click();
+
+  await expect(page.getByRole('alert')).toHaveText(
+    'No pudimos iniciar el audio. Revisa los permisos del navegador e inténtalo de nuevo.',
+  );
+  await expect(page.getByRole('heading', { name: /en curso/ })).not.toBeVisible();
+  await expect(page.getByRole('button', { name: /Deep Focus/ })).toBeEnabled();
+});
+```
+
+- [ ] **Step 2: Ejecutar la prueba para comprobar que falla**
+
+Run:
+
+```powershell
+npx playwright test e2e/audio-error.spec.ts --project=chromium
+```
+
+Expected: FAIL porque la aplicación todavía no captura el rechazo de inicio.
+
+- [ ] **Step 3: Añadir error recuperable a la pantalla de inicio**
+
+Change `HomeScreenProps` in `src/features/home/HomeScreen.tsx` to:
+
+```tsx
+interface HomeScreenProps {
+  readonly errorMessage: string | null;
+  readonly selectionMessage: string;
+  readonly onSelect: (mode: ModeDefinition) => void;
+}
+```
+
+Change the component signature and add the alert immediately before `</main>`:
+
+```tsx
+export function HomeScreen({ errorMessage, selectionMessage, onSelect }: HomeScreenProps) {
+  return (
+    <main className="app-shell">
+      <p className="eyebrow">BrainSound</p>
+      <h1>Elige cómo quieres sentirte</h1>
+      <p>Audio funcional gratuito, privado y disponible incluso sin conexión.</p>
+      <p className="responsible-note">
+        Diseñado para acompañar tu rutina; no es un tratamiento médico ni sustituye orientación profesional.
+      </p>
+      <section aria-label="Modos de audio" className="mode-grid">
+        {modeDefinitions.map((mode) => <ModeCard key={mode.id} mode={mode} onSelect={onSelect} />)}
+      </section>
+      <p aria-live="polite" className="selection-note">{selectionMessage}</p>
+      {errorMessage === null ? null : <p className="error-note" role="alert">{errorMessage}</p>}
+    </main>
+  );
+}
+```
+
+- [ ] **Step 4: Capturar el rechazo sin simular reproducción**
+
+In `src/app/App.tsx`, add:
+
+```tsx
+const [audioError, setAudioError] = useState<string | null>(null);
+
+function handleSelect(mode: ModeDefinition) {
+  setAudioError(null);
+  void session.start(getFallbackExperience(mode.id)).catch(() => {
+    setAudioError('No pudimos iniciar el audio. Revisa los permisos del navegador e inténtalo de nuevo.');
+  });
+}
+```
+
+Replace the `HomeScreen` use with:
+
+```tsx
+<HomeScreen errorMessage={audioError} selectionMessage="" onSelect={handleSelect} />
+```
+
+- [ ] **Step 5: Estilizar el error sin depender solo de color**
+
+Append to `src/styles/global.css`:
+
+```css
+.error-note {
+  padding: 0.85rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 0.75rem;
+  color: #ffd2df;
+  background: rgba(140, 24, 66, 0.3);
+}
+```
+
+- [ ] **Step 6: Verificar recuperación y regresión**
+
+Run:
+
+```powershell
+npx playwright test e2e/audio-error.spec.ts e2e/session.spec.ts
+npm run test:coverage
+npm run typecheck
+```
+
+Expected: cuatro ejecuciones E2E PASS, cobertura crítica mínima de 90% y typecheck con exit code `0`.
+
+- [ ] **Step 7: Commit**
+
+```powershell
+git add e2e/audio-error.spec.ts src/app/App.tsx src/features/home/HomeScreen.tsx src/styles/global.css
+git commit -m "fix: recover from blocked Web Audio startup"
+```
+
+### Task 14: Documentar, medir y verificar la Iteración 1
 
 **Files:**
 - Create: `README.md`
@@ -2008,13 +2141,25 @@ git add README.md docs/plans/2026-08-07-brainsound-mvp-roadmap.md docs/plans/202
 git commit -m "docs: close BrainSound foundation iteration"
 ```
 
+## Trazabilidad SPEC → tareas
+
+| Criterio I1 | Tareas |
+|---|---|
+| Tres modos e identidad visual | 4, 5 |
+| Inicio sintético en un clic | 6, 7, 9 |
+| Pausa/reanudación/detención | 7, 8, 9 |
+| Reloj monotónico sin deriva | 8 |
+| PWA y recarga offline | 10, 11 |
+| Teclado, movimiento y red privada | 12 |
+| Error de Web Audio recuperable | 13 |
+| Verificación y evidencia | 14 |
+
 ## Gate de aprobación antes de ejecutar
 
-Este documento fue redactado antes de formalizar la SPEC particular de I1 y queda suspendido. No iniciar código hasta que el usuario apruebe explícitamente:
+Este documento fue revisado contra la SPEC I1 aprobada. No iniciar código hasta que el usuario apruebe explícitamente:
 
-1. `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md`;
-2. la revisión de este plan contra esa SPEC;
-3. la descomposición del MVP en cinco iteraciones del roadmap;
-4. que el catálogo de 15 experiencias, intensidades y audio híbrido se incorporen en I2 e I3 sin ampliar I1.
+1. este plan detallado de I1;
+2. la descomposición del MVP en cinco iteraciones del roadmap;
+3. que el catálogo de 15 experiencias, intensidades y audio híbrido se incorporen en I2 e I3 sin ampliar I1.
 
 Cualquier cambio funcional o arquitectónico posterior actualiza primero la SPEC o este plan, registra la decisión y vuelve a pasar por aprobación SDD.

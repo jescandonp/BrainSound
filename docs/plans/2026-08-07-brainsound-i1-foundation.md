@@ -18,6 +18,8 @@
 
 **Corrección de trazabilidad de seguridad:** el 2026-08-08 la prueba de ganancia se alineó con la SPEC I1, que exige el rango `(0, 0.12]` para los tres perfiles y no únicamente para Deep Focus.
 
+**Ajuste técnico E2E aprobado:** el 2026-08-08 se sustituyó el `webServer` administrado por Playwright por un `globalSetup` que construye la aplicación e inicia y cierra Vite mediante su API JavaScript. En Windows, el proceso hijo del servidor completaba las pruebas pero quedaba bloqueado durante el cierre; el ciclo en proceso conserva la verificación contra el build de producción y evita procesos huérfanos. No cambia el alcance funcional ni los criterios de aceptación.
+
 ---
 
 ## Contexto y compuertas
@@ -53,6 +55,7 @@ eslint.config.js                            Reglas estáticas
 vite.config.ts                              Build React
 vitest.config.ts                            Unitarias y cobertura
 playwright.config.ts                        E2E Chromium/WebKit
+e2e/global-setup.ts                         Build y servidor Vite controlados para E2E
 index.html                                  Entrada y metadatos PWA
 public/manifest.webmanifest                 Manifest instalable
 public/icons/brainsound.svg                 Icono original del proyecto
@@ -341,6 +344,7 @@ git commit -m "feat: add BrainSound React shell"
 - Create: `eslint.config.js`
 - Create: `vitest.config.ts`
 - Create: `playwright.config.ts`
+- Create: `e2e/global-setup.ts`
 
 - [ ] **Step 1: Crear lint estricto para TypeScript**
 
@@ -402,7 +406,28 @@ export default defineConfig({
 });
 ```
 
-- [ ] **Step 3: Configurar Playwright contra build de producción**
+- [ ] **Step 3: Configurar Playwright contra build de producción con ciclo de servidor controlado**
+
+Create `e2e/global-setup.ts`:
+
+```ts
+import { build, preview } from 'vite';
+
+export default async function globalSetup() {
+  await build();
+  const server = await preview({
+    preview: {
+      host: '127.0.0.1',
+      port: 4173,
+      strictPort: true,
+    },
+  });
+
+  return async () => {
+    await server.close();
+  };
+}
+```
 
 Create `playwright.config.ts`:
 
@@ -411,16 +436,12 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './e2e',
+  globalSetup: './e2e/global-setup.ts',
   fullyParallel: false,
   retries: 0,
   use: {
     baseURL: 'http://127.0.0.1:4173',
     trace: 'retain-on-failure',
-  },
-  webServer: {
-    command: 'npm run build && npm run preview -- --port 4173',
-    url: 'http://127.0.0.1:4173',
-    reuseExistingServer: false,
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
@@ -444,7 +465,7 @@ Expected: lint termina con exit code `0`; Chromium y WebKit quedan disponibles; 
 - [ ] **Step 5: Commit**
 
 ```powershell
-git add eslint.config.js vitest.config.ts playwright.config.ts
+git add eslint.config.js vitest.config.ts playwright.config.ts e2e/global-setup.ts
 git commit -m "test: configure BrainSound quality gates"
 ```
 

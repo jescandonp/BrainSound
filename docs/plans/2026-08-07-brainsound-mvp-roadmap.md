@@ -3,7 +3,8 @@
 - **SPEC de origen:** `docs/specs/2026-08-07-brainsound-mvp-design.md`
 - **Fecha:** 2026-08-07
 - **Estado:** propuesta para aprobación
-- **Regla SDD:** cada iteración requiere un plan detallado aprobado antes de modificar código.
+- **Tipo:** roadmap de trazabilidad; no es un plan ejecutable
+- **Regla SDD:** cada iteración requiere primero una SPEC aprobada y después un plan detallado aprobado antes de modificar código.
 
 ## Motivo de la descomposición
 
@@ -27,17 +28,23 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md` — propuesta, pendiente de aprobación.
+
 **Objetivo:** producir una PWA instalable con identidad Energía cromática, tres modos, audio sintético de respaldo, reproductor compacto, temporizador libre y recarga offline.
 
 **Entrega verificable:** una persona abre BrainSound, selecciona cualquiera de los tres modos, escucha un paisaje sintético local, pausa o reanuda, observa el tiempo transcurrido y recarga la aplicación sin red.
 
-**Plan detallado:** `docs/plans/2026-08-07-brainsound-i1-foundation.md`.
+**Plan detallado:** `docs/plans/2026-08-07-brainsound-i1-foundation.md` — suspendido hasta aprobación de la SPEC I1 y revisión de trazabilidad.
 
 **Compuerta de salida:** lint, tipos, unitarias, cobertura, compilación, catálogo de respaldo y E2E Chromium/WebKit en verde.
 
 ## I2 — Catálogo, licencias y canal de activos
 
 **Estado:** Planificada.
+
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i2-catalog-spec.md` — propuesta, pendiente de aprobación.
+
+**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i2-catalog.md`; no se escribe hasta aprobar la SPEC I2.
 
 **Objetivo:** establecer el contrato definitivo del catálogo y la entrada segura de activos redistribuibles.
 
@@ -51,6 +58,10 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i3-audio-engine-spec.md` — propuesta, pendiente de aprobación.
+
+**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i3-audio-engine.md`; no se escribe hasta aprobar la SPEC I3.
+
 **Objetivo:** reemplazar el uso normal del sintetizador de respaldo por mezcla híbrida de música, ambiente y naturaleza.
 
 **Entrega verificable:** cada experiencia reproduce capas locales, cambia entre intensidades suave/media/profunda y transiciona en 8–12 segundos sin silencio inesperado; el sintetizador de I1 permanece como degradación segura.
@@ -63,6 +74,10 @@ I5 Offline transaccional y entrega MVP
 
 **Estado:** Planificada.
 
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i4-personal-experience-spec.md` — propuesta, pendiente de aprobación.
+
+**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i4-personal-experience.md`; no se escribe hasta aprobar la SPEC I4.
+
 **Objetivo:** completar la experiencia funcional de uso personal.
 
 **Entrega verificable:** calibración inicial, inicio con un clic, explorar/buscar, favoritos, recientes, cuenta regresiva, intervalos, valoración, selector local explicable, progreso y rachas.
@@ -74,6 +89,10 @@ I5 Offline transaccional y entrega MVP
 ## I5 — Instalación transaccional, respaldo y entrega MVP
 
 **Estado:** Planificada.
+
+**SPEC de iteración:** `docs/specs/2026-08-07-brainsound-i5-offline-release-spec.md` — propuesta, pendiente de aprobación.
+
+**Plan detallado previsto:** `docs/plans/2026-08-07-brainsound-i5-offline-release.md`; no se escribe hasta aprobar la SPEC I5.
 
 **Objetivo:** cerrar la instalación completa del catálogo y la calidad multiplataforma.
 
@@ -94,4 +113,4 @@ I5 Offline transaccional y entrega MVP
 
 ## Política de cambios
 
-Un cambio dentro de una iteración actualiza primero su plan. Un cambio de alcance, arquitectura, navegadores, catálogo, afirmaciones o criterios de éxito actualiza primero la SPEC y vuelve a la compuerta de aprobación.
+Un cambio dentro de una iteración actualiza primero su SPEC si afecta comportamiento o contratos, y después su plan. Un cambio de alcance, arquitectura, navegadores, catálogo, afirmaciones o criterios de éxito actualiza primero la SPEC maestra. Ningún plan previsto se escribe antes de aprobar su SPEC de iteración.

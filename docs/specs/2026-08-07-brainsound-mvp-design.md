@@ -2,7 +2,7 @@
 
 - **Versión:** 0.1.0
 - **Fecha:** 2026-08-07
-- **Estado:** especificación aprobada por el usuario el 2026-08-07; planificación en curso
+- **Estado:** especificación aprobada por el usuario el 2026-08-07; SPECs de iteración en revisión
 - **Método:** Spec-Driven Development (SPEC → PLAN → TASKS → IMPLEMENT)
 
 ## 1. Objetivo
@@ -387,4 +387,15 @@ No existen preguntas de producto que bloqueen el plan. La selección exacta de l
 
 ## 19. Compuerta SDD
 
-La revisión y aprobación explícita de esta especificación quedó registrada el 2026-08-07. El MVP se descompondrá en iteraciones; cada plan deberá aprobarse antes de ejecutar sus tareas y cualquier cambio de alcance actualizará primero esta SPEC.
+La revisión y aprobación explícita de esta especificación quedó registrada el 2026-08-07. El MVP se descompone en cinco iteraciones y cada una sigue obligatoriamente esta secuencia:
+
+```text
+SPEC de iteración propuesta
+  → revisión y aprobación explícita del usuario
+  → plan detallado propuesto
+  → revisión y aprobación explícita del usuario
+  → ejecución incremental
+  → evidencia y cierre de compuerta
+```
+
+No se crea ni modifica código, dependencias, activos, configuración ejecutable o despliegue sin una SPEC de iteración aprobada y un plan aprobado. El roadmap no es un plan ejecutable. Cualquier cambio de alcance actualiza primero esta SPEC maestra y luego la SPEC de la iteración afectada.

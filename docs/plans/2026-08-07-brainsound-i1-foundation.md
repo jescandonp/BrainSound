@@ -8,13 +8,14 @@
 
 **Tech Stack:** Node.js 24.18.1 LTS, TypeScript 7.0.2, React 19.2.8, Vite 8.1.5, Vitest 4.1.10, Playwright 1.61.1, ESLint 10.8.0 y Web Audio/Service Worker nativos.
 
-**Estado:** propuesta para aprobación SDD.
+**Estado:** suspendido; no ejecutable hasta aprobar `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md` y volver a revisar este plan.
 
 ---
 
 ## Contexto y compuertas
 
-- SPEC aprobada: `docs/specs/2026-08-07-brainsound-mvp-design.md`.
+- SPEC maestra aprobada: `docs/specs/2026-08-07-brainsound-mvp-design.md`.
+- SPEC de I1 propuesta: `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md`; su aprobación es previa a la revisión de este plan.
 - Hoja de ruta: `docs/plans/2026-08-07-brainsound-mvp-roadmap.md`.
 - Ejecutar en un worktree nuevo con rama `feat/i1-foundation`; no implementar directamente sobre `master`.
 - No agregar cuentas, backend, IndexedDB, audios externos, analítica, router o librería de estado en I1.
@@ -2009,10 +2010,11 @@ git commit -m "docs: close BrainSound foundation iteration"
 
 ## Gate de aprobación antes de ejecutar
 
-Este documento es una propuesta de implementación. No iniciar código hasta que el usuario apruebe explícitamente:
+Este documento fue redactado antes de formalizar la SPEC particular de I1 y queda suspendido. No iniciar código hasta que el usuario apruebe explícitamente:
 
-1. la descomposición del MVP en cinco iteraciones del roadmap;
-2. el alcance de I1 como vertical sintética, instalable y offline;
-3. que el catálogo de 15 experiencias, intensidades y audio híbrido se incorporen en I2 e I3 sin ampliar I1.
+1. `docs/specs/2026-08-07-brainsound-i1-foundation-spec.md`;
+2. la revisión de este plan contra esa SPEC;
+3. la descomposición del MVP en cinco iteraciones del roadmap;
+4. que el catálogo de 15 experiencias, intensidades y audio híbrido se incorporen en I2 e I3 sin ampliar I1.
 
 Cualquier cambio funcional o arquitectónico posterior actualiza primero la SPEC o este plan, registra la decisión y vuelve a pasar por aprobación SDD.

@@ -6,7 +6,7 @@
 
 **Architecture:** Repositorios pequeños aíslan IndexedDB mediante `idb`; temporizadores, recomendación y rachas permanecen puros con reloj/zona inyectables. React orquesta casos de uso y estados degradados, pero no accede directamente a la base.
 
-**Tech Stack:** React 19.2.8, TypeScript 7.0.2, `idb` 8.0.3, IndexedDB, Vitest, fake-indexeddb para integración, Playwright Chromium/WebKit.
+**Tech Stack:** React 19.2.8, TypeScript 6.0.3, `idb` 8.0.3, IndexedDB, Vitest, fake-indexeddb para integración, Playwright Chromium/WebKit.
 
 ---
 

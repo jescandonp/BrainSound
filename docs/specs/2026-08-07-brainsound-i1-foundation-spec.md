@@ -106,7 +106,7 @@ Parámetros aprobables de I1:
 ## 6. Base técnica y comandos
 
 - Node.js 24.18.1 LTS.
-- TypeScript 7.0.2 en modo estricto.
+- TypeScript 6.0.3 en modo estricto, ajuste técnico aprobado el 2026-08-08 para mantener resolución estándar de dependencias.
 - React/React DOM 19.2.8.
 - Vite 8.1.5.
 - Vitest 4.1.10 y cobertura V8.

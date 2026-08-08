@@ -208,7 +208,7 @@ El archivo JSON tendrá versión de esquema y no incluirá audio. La importació
 Versiones verificadas el 2026-08-07; se fijarán exactamente en el archivo de bloqueo:
 
 - Node.js 24.18.1 LTS.
-- TypeScript 7.0.2.
+- TypeScript 6.0.3, ajustado el 2026-08-08 para respetar el rango compatible de `typescript-eslint` 8.65.0.
 - React y React DOM 19.2.8.
 - Vite 8.1.5.
 - Vitest 4.1.10.

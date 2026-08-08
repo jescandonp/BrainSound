@@ -6,9 +6,11 @@
 
 **Architecture:** La interfaz React depende de contratos de dominio y de un `AudioPort`, no de Web Audio directamente. Un `SessionController` coordina el adaptador sintético y un reloj monotónico; el Service Worker conserva el shell estático para offline. Esta iteración deja contratos estables para que I2 incorpore manifiestos y I3 reemplace el audio normal por capas híbridas sin reescribir la UI.
 
-**Tech Stack:** Node.js 24.18.1 LTS, TypeScript 7.0.2, React 19.2.8, Vite 8.1.5, Vitest 4.1.10, Playwright 1.61.1, ESLint 10.8.0 y Web Audio/Service Worker nativos.
+**Tech Stack:** Node.js 24.18.1 LTS, TypeScript 6.0.3, React 19.2.8, Vite 8.1.5, Vitest 4.1.10, Playwright 1.61.1, ESLint 10.8.0 y Web Audio/Service Worker nativos.
 
 **Estado:** aprobado por el usuario el 2026-08-07; Iteración 1 autorizada para ejecución.
+
+**Ajuste técnico aprobado:** el 2026-08-08 se sustituyó TypeScript 7.0.2 por 6.0.3 porque `typescript-eslint` 8.65.0 declara compatibilidad `>=4.8.4 <6.1.0`. No cambia alcance, arquitectura ni criterios de aceptación.
 
 ---
 
@@ -138,7 +140,7 @@ Create `package.json`:
     "@vitejs/plugin-react": "6.0.4",
     "@vitest/coverage-v8": "4.1.10",
     "eslint": "10.8.0",
-    "typescript": "7.0.2",
+    "typescript": "6.0.3",
     "typescript-eslint": "8.65.0",
     "vite": "8.1.5",
     "vitest": "4.1.10"

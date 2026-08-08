@@ -6,7 +6,7 @@
 
 **Architecture:** Los manifiestos JSON entran como `unknown`, pasan por validación estructural y de archivos, y solo entonces forman un `CatalogRepository`. La aplicación consume contratos tipados y búsqueda pura; los scripts Node verifican disco, SHA-256, presupuesto y generan reportes deterministas sin descargar ni modificar activos.
 
-**Tech Stack:** Node.js 24.18.1, TypeScript 7.0.2, React 19.2.8, Vite 8.1.5, Vitest 4.1.10, Playwright 1.61.1, APIs nativas `node:fs`, `node:crypto` y `fetch` local.
+**Tech Stack:** Node.js 24.18.1, TypeScript 6.0.3, React 19.2.8, Vite 8.1.5, Vitest 4.1.10, Playwright 1.61.1, APIs nativas `node:fs`, `node:crypto` y `fetch` local.
 
 ---
 
